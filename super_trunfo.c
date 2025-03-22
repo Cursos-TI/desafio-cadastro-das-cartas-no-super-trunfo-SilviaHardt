@@ -7,12 +7,14 @@ int main() {
     int populacao1;
     float area1, pib1;
     int pontosTuristicos1;
+    float densidade1, pibPerCapita1;
 
     //declarando as variáveis para a Carta 2
     char estado2, codigo2[3], cidade2[50];
     int populacao2;
     float area2, pib2;
     int pontosTuristicos2;
+    float densidade2, pibPerCapita2;
 
     //Entradas para a Carta 1
     printf("Informações para a Carta 1\n");
@@ -38,7 +40,13 @@ int main() {
     printf("Informe o número de pontos turísticos da cidade: ");
     scanf("%d", &pontosTuristicos1);
 
-    
+    //Calculando a Densidade Populacional da Carta 1
+    densidade1 = populacao1 / area1;
+
+    //Calculando o PIB per Capita da Carta 1
+    pibPerCapita1 = pib1 / populacao1;
+
+
     //Entradas para a Carta 2
     printf("Informações para a Carta 2\n");
 
@@ -62,7 +70,14 @@ int main() {
     
     printf("Informe o número de pontos turísticos da cidade: ");
     scanf("%d", &pontosTuristicos2);
+
+    //Calculando a Densidade Populacional da Carta 2
+    densidade2 = populacao2 / area2;
+
+    //Calculando o PIB per Capita da Carta 2
+    pibPerCapita2 = pib2 / populacao2;
     
+
     //Imprimindo as informações da Carta 1
     printf("Carta 1 \n");
     printf("Estado: %c\n", estado1);
@@ -73,6 +88,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de pontos turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
     //Imprimindo as informações da Carta 2
     printf("Carta 2 \n");
@@ -84,16 +101,9 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de pontos turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
     return 0;
 
 }
-
-// Carta 1:
-// Estado: A
-// Código: A01
-// Nome da Cidade: São Paulo
-// População: 12325000
-// Área: 1521.11 km²
-// PIB: 699.28 bilhões de reais
-// Número de Pontos Turísticos: 50
